@@ -1,4 +1,4 @@
-from animereminder import AnimeReminder
+from package.animereminder import AnimeReminder
 
 if __name__ == '__main__':
     apps = AnimeReminder()

@@ -1,11 +1,11 @@
 from win10toast import ToastNotifier
 import sqlite3
 from datetime import date
-from GUI_anime import GUI
-from scraping import Scraping
+from .GUI_anime import GUI
+from .scraping import Scraping
 import pickle
 import multiprocessing
-from whatsapp import Whatsapp
+from .whatsapp import Whatsapp
 
 class AnimeReminder:
     """
@@ -43,9 +43,9 @@ class AnimeReminder:
 
     # Checking the data in pickle and today's date
     def check_date(self, date):
-        date_saved = self.unpickling_date("date.pickle")
+        date_saved = self.unpickling_date("package/date.pickle")
         if (date_saved != date):
-            self.pickling_date("date.pickle", date)
+            self.pickling_date("package/date.pickle", date)
             return 1
         return 0
     ###########################################################################################################
